@@ -1259,14 +1259,15 @@ button {
           align-items: center;
 }
 
-.how-it-works__content img,
-.how-it-works__content picture {
+.how-it-works__content img {
+  display: block;
   max-width: 100%;
   max-height: 600px;
   width: auto;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 0 auto;
 }
 
 .how-it-works__image {
