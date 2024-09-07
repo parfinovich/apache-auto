@@ -1,0 +1,203 @@
+.why-choose-us {
+    padding: 60px 0;
+    &__title {
+        @include main_title;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 45px;
+    }
+    &__item {
+        flex-basis: 22%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    &__item-title {
+        @include secondary_title;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    &__item-text {
+        @include main_descr;
+        margin-top: auto;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .why-choose-us {
+        padding: 40px 10px;
+        &__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    
+        &__items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        &__item {
+            flex-basis: 100%;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+    
+        &__icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+    
+        &__item-title {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+        &__item-text {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            margin-top: auto;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .why-choose-us {
+        padding: 50px 15px;
+        &__title {
+            font-size: 26px;
+            margin-bottom: 35px;
+        }
+    
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+    
+        &__item {
+            flex-basis: calc(50% - 30px);
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+    
+        &__icon {
+            width: 55px;
+            height: 55px;
+            margin-bottom: 15px;
+        }
+    
+        &__item-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+    
+        &__item-text {
+            font-size: 17px;
+            line-height: 26px;
+            margin-top: auto;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .why-choose-us {
+        padding: 60px 0;
+        &__title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+    
+        &__item {
+            flex-basis: calc(33.333% - 15px);
+            padding: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+    
+        &__icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    
+        &__item-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    
+        &__item-text {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }   
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .why-choose-us {
+        padding: 70px 0;
+        &__title {
+            font-size: 30px;
+            margin-bottom: 45px;
+        }
+    
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+    
+        &__item {
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+    
+        &__icon {
+            width: 65px;
+            height: 65px;
+            margin-bottom: 20px;
+        }
+    
+        &__item-title {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+    
+        &__item-text {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}

@@ -1,0 +1,372 @@
+.team {
+    padding: 115px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__image-wrapper {
+        flex-shrink: 0;
+    }
+
+    &__image {
+        width: 615px;
+        height: 565px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    &__content {
+        flex: 1;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include main_title;
+        line-height: 56px;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include main_descr;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    &__contact {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 31px;
+        border: solid 1px $main-color;
+        border-radius: 44px;
+        &:hover {
+            transform: scale(1.1);
+            transition: all .4s ease-in-out;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    &__contact-text {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 15px;
+        color: $main-color;
+        text-decoration: none;
+    }
+
+    &__button {
+        @include primary_btn;
+        border-radius: 12px;
+        width: 185px;
+    }
+}
+@media (max-width: 575.98px) {
+    .team {
+        padding: 60px 10px;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    
+        &__image-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        &__image {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            border-radius: 16px;
+        }
+    
+        &__content {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        &__title {
+            font-size: 26px;
+            line-height: 36px;
+            margin-bottom: 15px;
+        }
+    
+        &__subtitle {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+    
+        &__contact {
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+    
+        &__contact-item {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+    
+        &__icon {
+            width: 18px;
+            height: 18px;
+        }
+    
+        &__contact-text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__button {
+            width: 100%;
+            padding: 15px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .team {
+        padding: 40px 20px;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        &__image-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        &__image {
+            width: 100%;
+            height: auto;
+            max-width: 550px;
+            border-radius: 16px;
+        }
+    
+        &__content {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        &__title {
+            font-size: 28px;
+            line-height: 38px;
+            margin-bottom: 20px;
+        }
+    
+        &__subtitle {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+    
+        &__contact {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+    
+        &__contact-item {
+            width: 100%;
+            max-width: 350px;
+            justify-content: center;
+            padding: 12px 25px;
+        }
+    
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    
+        &__contact-text {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    
+        &__button {
+            width: 100%;
+            padding: 14px;
+        }
+    }  
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .team {
+        padding: 50px 30px;
+        &__container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+    
+        &__image-wrapper {
+            flex-shrink: 0;
+            width: 50%;
+            max-width: 450px;
+        }
+    
+        &__image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    
+        &__content {
+            flex: 1;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    
+        &__title {
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 20px;
+        }
+    
+        &__subtitle {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+    
+        &__contact {
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+    
+        &__contact-item {
+            width: 100%;
+            max-width: 350px;
+            padding: 12px 25px;
+        }
+    
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    
+        &__contact-text {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    
+        &__button {
+            width: 100%;
+            max-width: 220px;
+            padding: 14px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .team {
+        padding: 70px 40px;
+        &__container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+    
+        &__image-wrapper {
+            flex-shrink: 0;
+            width: 45%;
+            max-width: 500px;
+        }
+    
+        &__image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    
+        &__content {
+            flex: 1;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    
+        &__title {
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 25px;
+        }
+    
+        &__subtitle {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+    
+        &__contact {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+    
+        &__contact-item {
+            padding: 15px 35px;
+            border-radius: 50px;
+        }
+    
+        &__icon {
+            width: 22px;
+            height: 22px;
+        }
+    
+        &__contact-text {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    
+        &__button {
+            width: 215px;
+            padding: 18px;
+        }
+    }
+}
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+    .team {
+        &__contact {
+            flex-direction: column;
+        }
+        &__contact-item {
+            max-width: 250px;
+        }
+    }
+}

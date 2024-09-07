@@ -1,0 +1,337 @@
+.testimonials {
+    padding: 115px 0;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    &__title {
+        @include main_title;
+    }
+    &__controls {
+        display: flex;
+        gap: 25px;
+    }
+    &__prev,
+    &__next {
+        background-color: #ffffff;
+        padding: 15px 24px;
+        cursor: pointer;
+        border: 1px solid #E9E9E9;
+        border-radius: 30px;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: $main-color;
+            color: #ffffff;
+        }
+    }
+    &__card {
+        background-color: rgba(235, 247, 254, 1);
+        border-radius: 16px;
+        padding: 27px 40px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 447px;
+        min-height: 360px;
+        justify-content: space-between;
+    }
+    &__card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    &__quote-left,
+    &__quote-right {
+        font-size: 2rem;
+        color: #ccc;
+    }
+    &__card-title {
+        @include secondary_title;
+        line-height: 30px;
+        margin-right: 20px;
+        height: 60px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    &__quote {
+        width: 37px;
+        height: 26px;
+    }
+    &__text {
+        @include main_descr;
+        margin-bottom: 40px;
+        flex: 1;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+    }
+    &__author-photo {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: contain;
+    }
+    &__author-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+    }
+}
+@media (max-width: 575.98px) {
+    .testimonials {
+        padding: 60px 10px;
+        &__header {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+    
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    
+        &__controls {
+            display: flex;
+            justify-content: center;
+        }
+    
+        &__prev, &__next {
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+    
+        &__carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        &__card {
+            max-width: 100%;
+            padding: 20px;
+        }
+    
+        &__card-title {
+            font-size: 18px;
+            line-height: 24px;
+            height: auto;
+        }
+    
+        &__text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    
+        &__author {
+            margin-top: 10px;
+        }
+    
+        &__author-photo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+    
+        &__author-name {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .testimonials {
+        padding: 80px 20px;
+        &__header {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            gap: 0;
+        }
+    
+        &__title {
+            font-size: 26px;
+            line-height: 34px;
+        }
+    
+        &__controls {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        &__prev, &__next {
+            padding: 12px 18px;
+            border-radius: 25px;
+        }
+    
+        &__carousel {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    
+        &__card {
+            max-width: 100%;
+            padding: 25px;
+            min-height: 300px;
+        }
+    
+        &__card-title {
+            font-size: 20px;
+            line-height: 28px;
+            height: auto;
+        }
+    
+        &__text {
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+    
+        &__author-photo {
+            width: 55px;
+            height: 55px;
+            margin-right: 12px;
+        }
+    
+        &__author-name {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .testimonials {
+        padding: 100px 30px;
+        &__header {
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &__title {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    
+        &__controls {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        &__prev,
+        &__next {
+            padding: 12px 20px;
+            border-radius: 25px;
+        }
+    
+        &__carousel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: space-between;
+        }
+    
+        &__card {
+            max-width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            min-height: 320px;
+        }
+    
+        &__card-title {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    
+        &__author-photo {
+            width: 58px;
+            height: 58px;
+            margin-right: 12px;
+        }
+    
+        &__author-name {
+            font-size: 16px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .testimonials {
+        padding: 100px 50px;
+        &__header {
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &__title {
+            font-size: 30px;
+            line-height: 38px;
+        }
+    
+        &__controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+    
+        &__prev,
+        &__next {
+            padding: 12px 22px;
+            border-radius: 25px;
+        }
+    
+        &__carousel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+    
+        &__card {
+            max-width: 100%;
+            padding: 35px;
+            box-sizing: border-box;
+            min-height: 340px;
+        }
+    
+        &__card-title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 18px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+    
+        &__author-photo {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+    
+        &__author-name {
+            font-size: 16px;
+        }
+    }
+}

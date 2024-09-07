@@ -1,0 +1,470 @@
+.advantages {
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__images {
+        display: flex;
+        position: relative;
+        margin-right: 50px;
+    }
+    &__image-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        align-self: flex-end;
+
+    }
+    &__image {
+        border-radius: 16px;
+    }
+
+    &__image--top-left {
+        width: 285px;
+        height: 279px;
+        object-fit: cover;
+    }
+
+    &__image--bottom-left {
+        width: 224px;
+        height: 224px;
+        object-fit: cover;
+        align-self: flex-end;
+    }
+
+    &__image--right {
+        width: 327px;
+        height: 435px;
+        margin-left: 55px;
+        object-fit: cover;
+        align-self: flex-end;
+    }
+
+    &__content {
+        flex: 1;
+        margin-left: 40px;
+    }
+
+    &__title {
+        @include main_title;
+        line-height: 56px !important;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @include main_descr;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 27.8px;
+    }
+    &__icon-wrapper {
+        width: 25px;
+        height: 25px;
+        background-color: rgba(64, 95, 242, 0.07);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    &__icon {
+        width: 10px;
+        height: 10px;
+    }
+    &__button {
+        width: 215px;
+        @include primary_btn;
+        border-radius: 12px;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 575.98px) {
+    .advantages {
+        flex-direction: column;
+        padding: 60px 10px;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__images {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    
+        &__image-group {
+            gap: 15px;
+            justify-content: space-between;
+            align-self: center;
+        }
+    
+        &__image--top-left {
+            width: 140px;
+            height: 150px;
+        }
+    
+        &__image--bottom-left {
+            width: 120px;
+            height: 120px;
+        }
+    
+        &__image--right {
+            width: 150px;
+            height: 285px;
+            margin-left: 10px;
+        }
+    
+        &__content {
+            margin-left: 0;
+        }
+    
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 30px;
+        }
+    
+        &__list {
+            padding: 0;
+            margin: 0;
+        }
+    
+        &__item {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        &__icon-wrapper {
+            display: none;
+        }
+        &__button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 15px;
+            font-size: 14px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .advantages {
+        padding: 80px 20px;
+        flex-direction: column;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+    
+        &__image-group {
+            gap: 20px;
+            justify-content: space-between;
+        }
+    
+        &__image--top-left {
+            width: 180px;
+            height: 180px;
+        }
+    
+        &__image--bottom-left {
+            width: 150px;
+            height: 150px;
+        }
+    
+        &__image--right {
+            width: 250px;
+            height: 350px;
+        }
+    
+        &__content {
+            margin-left: 0;
+        }
+    
+        &__title {
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 25px;
+        }
+    
+        &__text {
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 40px;
+        }
+    
+        &__list {
+            padding: 0;
+            margin: 0;
+        }
+    
+        &__item {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+    
+        &__button {
+            width: 100%;
+            margin-top: 40px;
+            padding: 18px;
+            font-size: 15px;
+        }
+    }   
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .advantages {
+        padding: 90px 40px;
+        flex-direction: column;
+        &__container {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    
+        &__images {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    
+        &__image-group {
+            flex-direction: column;
+            gap: 40px;
+        }
+    
+        &__image--top-left {
+            width: 220px;
+            height: 220px;
+        }
+    
+        &__image--bottom-left {
+            width: 180px;
+            height: 180px;
+        }
+    
+        &__image--right {
+            width: 280px;
+            height: 350px;
+        }
+    
+        &__content {
+            flex: 1;
+            margin-left: 20px;
+            text-align: left;
+        }
+    
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 25px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 35px;
+        }
+    
+        &__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    
+        &__item {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+    
+        &__icon-wrapper {
+            width: 20px;
+            height: 20px;
+        }
+    
+        &__icon {
+            width: 8px;
+            height: 8px;
+        }
+    
+        &__button {
+            width: 200px;
+            margin-top: 40px;
+            padding: 18px;
+            font-size: 16px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .advantages {
+        padding: 100px 40px;
+        &__container {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        &__images {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    
+        &__image-group {
+            gap: 45px;
+        }
+    
+        &__image--top-left {
+            width: 250px;
+            height: 240px;
+        }
+    
+        &__image--bottom-left {
+            width: 200px;
+            height: 200px;
+        }
+    
+        &__image--right {
+            width: 300px;
+            height: 380px;
+        }
+    
+        &__content {
+            flex: 1;
+            margin-left: 30px;
+        }
+    
+        &__title {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 20px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+    
+        &__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    
+        &__item {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    
+        &__icon-wrapper {
+            width: 22px;
+            height: 22px;
+        }
+    
+        &__icon {
+            width: 9px;
+            height: 9px;
+        }
+    
+        &__button {
+            width: 200px;
+            padding: 18px;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+    }    
+}
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+    .advantages {
+        padding: 80px 20px;
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    
+        &__images {
+            flex-basis: 40%;
+            margin-right: 30px;
+        }
+    
+        &__image-group {
+            gap: 30px;
+        }
+    
+        &__image--top-left {
+            width: 220px;
+            height: 220px;
+        }
+    
+        &__image--bottom-left {
+            width: 180px;
+            height: 180px;
+        }
+    
+        &__image--right {
+            width: 250px;
+            height: 320px;
+        }
+    
+        &__content {
+            flex-basis: 55%;
+            margin-left: 20px;
+        }
+    
+        &__title {
+            font-size: 34px;
+            line-height: 42px;
+            margin-bottom: 20px;
+        }
+    
+        &__text {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 40px;
+        }
+    
+        &__list {
+            margin-bottom: 30px;
+        }
+    
+        &__item {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+    
+        &__button {
+            width: 215px;
+            padding: 18px;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    }
+}

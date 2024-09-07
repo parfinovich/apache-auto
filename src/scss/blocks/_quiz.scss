@@ -1,0 +1,214 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    &__content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 40px 30px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+    }
+    &__close {
+        color: #E9E9E9;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+    }
+    &__close:hover {
+        color: $main-color;
+    }
+}
+
+.quiz {
+    &__step {
+        display: none;
+    }
+    &__step--active {
+        display: block;
+    }
+    &__step-title {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 40px;
+        color: $main-color;
+        margin-bottom: 20px;
+    }
+    &__options {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &__options-contact-method {
+        flex-direction: column;
+    }
+    &__option {
+        cursor: pointer;
+        text-align: center;
+    }
+    &__option input[type="radio"] {
+        display: none;
+    }
+    &__option img {
+        width: 30px;
+        height: 30px;
+    }
+    &__option p {
+        margin-top: 5px;
+    }
+    &__option input[type="radio"]:checked + img,
+    &__option input[type="radio"]:checked + p {
+        border: 2px solid #007bff;
+    }
+    &__next-button {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 15px;
+        background-color: $second-color;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        padding: 19px 49px 19px 26px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: url('../../img/icons/other/arrow-top-right-white.svg') no-repeat center center;
+            background-size: contain;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: right 0.3s ease;
+        }
+        &:hover::after {
+            right: 15px;
+        }
+    }    
+
+    &__select-wrapper {
+        width: 100%;
+        margin-top: 20px;        
+    }
+    &__select {
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        border: 2px solid #E9E9E9;
+        border-radius: 12px;
+        appearance: none;
+        cursor: pointer;
+    }
+    &__select:focus {
+        border-color: $second-color;
+        outline: none;
+    }
+    
+    &__step--3 input,
+    &__step--4 p,
+    &__step--5 input {
+        border: 2px solid #E9E9E9;
+        padding: 11px;
+        border-radius: 12px;
+        margin-right: 10px;
+    }
+    &__step--3 input[name="budget"] {
+        font-size: 16px;
+    }
+    &__step--5 input[name="name"],
+    &__step--5 input[name="phone"] {
+        font-size: 16px;
+    }
+    
+}
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.progress-bar__fill {
+    height: 100%;
+    width: 0;
+    background-color: $second-color;
+    transition: width 0.3s ease;
+}
+@media (max-width: 575.98px) {
+    .modal__content {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 10% auto;
+    }
+    .quiz__step-title {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+    .quiz__options {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .quiz__options-contact-method {
+        flex-direction: column;
+    }
+    .quiz__option {
+        flex-basis: 25%;
+    }
+    .quiz__option img {
+        width: 50px;
+        height: 50px;
+    }
+    .quiz__option p {
+        font-size: 14px;
+    }
+    .quiz__select {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .quiz__next-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .progress-bar {
+        margin-bottom: 15px;
+    }
+    .quiz__step--3 input,
+    .quiz__step--4 p,
+    .quiz__step--5 input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .contact-us__form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-us__input,
+    .contact-us__select {
+        padding: 12px;
+    }
+
+    .modal__close {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,299 @@
+.contact-us {
+    position: relative;
+    background-image: url('../../img/contact-us/contact-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+    &__overlay {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 115px 70px;
+    }
+
+    &__container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        @include main_title;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    &__subtitle {
+        @include main_descr;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    &__form {
+        width: 530px;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $main-color;
+        gap: 22px;
+    }
+
+    &__form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 14px;
+        color: $main-color;
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+
+    &__input,
+    &__select {
+        width: 100%;
+        padding: 12px 12px 12px 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: $main-color;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+    &__select {
+        appearance: none;
+        -webkit-appearance: none;
+        background: url('../../img/icons/other/arrow-top-right-blue.svg') no-repeat right 10px center;
+        cursor: pointer;
+    }
+    &__input:focus + &__label,
+    &__input:not(:placeholder-shown) + &__label,
+    &__select:focus + &__label,
+    &__select:not([value=""]) + &__label {
+        top: -8px;
+        left: 8px;
+        font-size: 13px;
+        color: $main-color;
+        background-color: #fff;
+        padding: 0 4px;
+    }
+
+    &__input:focus,
+    &__select:focus {
+        outline: none;
+        border-color: $main-color;
+    }
+    &__button {
+        @include primary_btn;
+        width: 205px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 0 auto;
+    }
+
+    &__disclaimer {
+        font-size: 14px;
+        color: $main-color;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 575.98px) {
+    .contact-us {
+        &__overlay {
+            padding: 30px 10px;
+        }
+    
+        &__container {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+    
+        &__title {
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+    
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    
+        &__form {
+            width: 100%;
+            padding: 20px;
+            box-shadow: none;
+        }
+    
+        &__form-group {
+            margin-bottom: 15px;
+        }
+    
+        &__label {
+            font-size: 13px;
+        }
+    
+        &__input,
+        &__select {
+            padding: 15px;
+            font-size: 14px;
+        }
+        &__button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+        }
+    
+        &__disclaimer {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-us {
+        &__overlay {
+            padding: 40px 20px;
+        }
+    
+        &__container {
+            max-width: 700px;
+        }
+    
+        &__title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    
+        &__form {
+            width: 100%;
+            padding: 40px;
+            box-shadow: none;
+        }
+    
+        &__input,
+        &__select {
+            font-size: 14px;
+            padding: 10px;
+            height: 45px;
+        }
+    
+        &__button {
+            width: 100%;
+            font-size: 15px;
+            padding: 15px;
+        }
+    
+        &__disclaimer {
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-us {
+        &__overlay {
+            padding: 100px 60px;
+        }
+    
+        &__container {
+            max-width: 800px;
+        }
+    
+        &__title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    
+        &__subtitle {
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+    
+        &__form {
+            width: 600px;
+            padding: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        &__input,
+        &__select {
+            font-size: 15px;
+            padding: 12px;
+            height: 50px;
+        }
+    
+        &__button {
+            width: 200px;
+            font-size: 16px;
+            padding: 15px;
+        }
+    
+        &__disclaimer {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .contact-us {
+        &__overlay {
+            padding: 100px 80px;
+        }
+    
+        &__container {
+            max-width: 900px;
+        }
+    
+        &__title {
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+    
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+    
+        &__form {
+            width: 650px;
+            padding: 60px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+    
+        &__input,
+        &__select {
+            font-size: 16px;
+            padding: 14px;
+            height: 55px;
+        }
+    
+        &__button {
+            width: 220px;
+            font-size: 16px;
+            padding: 15px;
+        }
+    
+        &__disclaimer {
+            font-size: 15px;
+            margin-top: 25px;
+        }
+    }
+}

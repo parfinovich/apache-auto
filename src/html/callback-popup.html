@@ -1,0 +1,25 @@
+<div id="callback-popup" class="popup-form">
+    <div class="popup-form__content">
+        <span class="popup-form__close">&times;</span>
+        <h2 class="popup-form__title">Замовте зворотній дзвінок</h2>
+        <p class="popup-form__subtitle">Залиште ваш номер телефону, і ми зв'яжемося з вами найближчим часом.</p>
+        <form class="popup-contact-us__form" action="/submit-callback" method="POST">
+            <div class="popup-contact-us__form-group">
+                <input type="text" id="name" name="name" class="popup-contact-us__input" required>
+                <label for="name" class="popup-contact-us__label">Ім'я</label>
+            </div>
+            <div class="popup-contact-us__form-group">
+                <input type="tel" id="phone" name="phone" class="popup-contact-us__input" required>
+                <label for="phone" class="popup-contact-us__label">Телефон</label>
+            </div>
+            <div class="popup-contact-us__form-group">
+                <textarea id="callback-request" name="callback-request" class="popup-contact-us__textarea" rows="4" required></textarea>
+                <label for="callback-request" class="popup-contact-us__label">Ваше повідомлення (необов'язково)</label>
+            </div>
+            <button type="submit" class="popup-contact-us__button">Замовити дзвінок</button>
+            <p class="popup-contact-us__disclaimer">
+                Натискаючи на кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності.
+            </p>
+        </form>
+    </div>
+</div>

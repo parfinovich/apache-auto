@@ -1,0 +1,130 @@
+.counter {
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0;
+    gap: 20px;
+    border-bottom: 1px solid #E1E1E1;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    &__item {
+        text-align: center;
+        flex: 1;
+    }
+    &__number-wrapper {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+    &__number, &__plus {
+        font-size: 38px;
+        font-weight: bold;
+        color: $second-color;
+        line-height: 53.2px;
+        position: relative;
+    }
+    &__plus {
+        margin-left: 5px;
+    }
+    &__description {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $main-color;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 575.98px) {
+    .counter {
+        margin: 10px 0;
+        padding: 30px 0;
+        gap: 30px;
+        border-bottom: 1px solid #E1E1E1;
+        flex-direction: column;
+        align-items: center;
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+    
+        &__item {
+            text-align: center;
+            flex: none;
+            width: 100%;
+        }
+    
+        &__number-wrapper {
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    
+        &__number {
+            font-size: 35px;
+            line-height: 48px;
+        }
+    
+        &__plus {
+            font-size: 35px;
+        }
+    
+        &__description {
+            font-size: 14px;
+            line-height: 20px;
+            max-width: 280px;
+        }
+    }    
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .counter {
+        margin: 20px 0;
+        padding: 40px 0;
+        gap: 20px;
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    
+        &__item {
+            text-align: center;
+            flex: 1 1 45%; /* Два элемента в строке */
+            margin-bottom: 20px;
+        }
+    
+        &__number-wrapper {
+            justify-content: center;
+        }
+    
+        &__number {
+            font-size: 36px;
+            line-height: 50px;
+        }
+    
+        &__plus {
+            font-size: 32px;
+        }
+    
+        &__description {
+            font-size: 14px;
+            line-height: 22px;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .counter {
+        margin: 30px 0;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .counter {
+        margin: 40px 0;
+    }
+}

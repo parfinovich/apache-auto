@@ -1,0 +1,103 @@
+@mixin main_title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    color: $main-color;
+}
+@mixin secondary_title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $main-color;
+}
+@mixin main_subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    color: $main-color;
+}
+@mixin main_descr {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27.8px;
+    color: $main-color;
+}
+@mixin link_icon {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    color: $main-color;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: url('../../img/icons/other/arrow-top-right.svg') no-repeat center center;
+        background-size: contain;
+        left: 0;
+        top: 0;
+    }
+}
+@mixin primary_btn {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    background-color: $second-color;
+    color: white;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 19px 49px 19px 26px;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: url('../../img/icons/other/arrow-top-right-white.svg') no-repeat center center;
+        background-size: contain;
+        right: 26px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        background-color: $main-color;
+        transition: all .2s ease-in-out;
+        &:after {
+            top: 40%;
+            transform: rotate(180deg);
+            transition: all .4s ease-in-out;
+        }
+    }
+}
+@mixin secondary_btn {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    background-color: #fff;
+    color: $main-color;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 19px 49px 19px 26px;
+    border: 1px solid $main-color;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: url('../../img/icons/other/arrow-top-right.svg') no-repeat center center;
+        background-size: contain;
+        right: 26px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        transition: all .2s ease-in-out;
+        &:after {
+            top: 40%;
+            transform: rotate(180deg);
+            transition: all .4s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+<div id="modal" class="modal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <form id="quizForm">
+      <div id="progress-bar" class="progress-bar">
+          <div class="progress-bar__fill"></div>
+      </div>
+      <div class="quiz__step quiz__step--1">
+          <h2 class="quiz__step-title" >Оберіть тип авто:</h2>
+          <div class="quiz__options">
+              <label class="quiz__option">
+                <input type="radio" name="carType" value="suv" />
+                <img src="../img/icons/hero/suv.svg" alt="SUV" />
+                <p>SUV</p>
+              </label>
+              <label class="quiz__option">
+                <input type="radio" name="carType" value="sedan" />
+                <img src="../img/icons/hero/sedan.svg" alt="Седан" />
+                <p>Седан</p>
+              </label>
+              <label class="quiz__option">
+                <input type="radio" name="carType" value="hatchback" />
+                <img src="../img/icons/hero/hatchback.svg" alt="Хетчбэк" />
+                <p>Хетчбэк</p>
+              </label>
+              <label class="quiz__option">
+                <input type="radio" name="carType" value="coupe" />
+                <img src="../img/icons/hero/coupe.svg" alt="Купе" />
+                <p>Купе</p>
+              </label>
+              <label class="quiz__option">
+                <input type="radio" name="carType" value="hybrid" />
+                <img src="../img/icons/hero/hybrid.svg" alt="Гибрид" />
+                <p>Гибрид</p>
+              </label>
+          </div>
+          <button type="button" class="quiz__next-button">Далі</button>
+      </div>
+
+      <div class="quiz__step quiz__step--2" style="display: none;">
+          <h2 class="quiz__step-title">Оберіть марку авто:</h2>
+          <div class="quiz__select-wrapper">
+            <select name="carBrand" class="quiz__select">
+              <option value="">Марка автомобиля</option>
+              <option value="Acura">Acura</option>
+              <option value="Alfa Romeo">Alfa Romeo</option>
+              <option value="Aston Martin">Aston Martin</option>
+              <option value="Audi">Audi</option>
+              <option value="Bentley">Bentley</option>
+              <option value="BMW">BMW</option>
+              <option value="Bugatti">Bugatti</option>
+              <option value="Cadillac">Cadillac</option>
+              <option value="Chery">Chery</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="Chrysler">Chrysler</option>
+              <option value="Citroen">Citroen</option>
+              <option value="Dacia">Dacia</option>
+              <option value="Datsun">Datsun</option>
+              <option value="Dodge">Dodge</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="Fiat">Fiat</option>
+              <option value="Ford">Ford</option>
+              <option value="Geely">Geely</option>
+              <option value="Genesis">Genesis</option>
+              <option value="Honda">Honda</option>
+              <option value="Hummer">Hummer</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="Infiniti">Infiniti</option>
+              <option value="Jaguar">Jaguar</option>
+              <option value="Jeep">Jeep</option>
+              <option value="Kia">Kia</option>
+              <option value="Lamborghini">Lamborghini</option>
+              <option value="Land Rover">Land Rover</option>
+              <option value="Lexus">Lexus</option>
+              <option value="Maserati">Maserati</option>
+              <option value="Mazda">Mazda</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Mini">Mini</option>
+              <option value="Mitsubishi">Mitsubishi</option>
+              <option value="Nissan">Nissan</option>
+              <option value="Opel">Opel</option>
+              <option value="Peugeot">Peugeot</option>
+              <option value="Porsche">Porsche</option>
+              <option value="Renault">Renault</option>
+              <option value="Rolls-Royce">Rolls-Royce</option>
+              <option value="Seat">Seat</option>
+              <option value="Skoda">Skoda</option>
+              <option value="Smart">Smart</option>
+              <option value="Subaru">Subaru</option>
+              <option value="Suzuki">Suzuki</option>
+              <option value="Tesla">Tesla</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Volkswagen">Volkswagen</option>
+              <option value="Volvo">Volvo</option>
+              <option value="Другая">Інша</option>
+            </select>
+          </div>
+          <button type="button" class="quiz__next-button">Далі</button>
+      </div>
+
+      <div class="quiz__step quiz__step--3" style="display: none;">
+        <h2 class="quiz__step-title" >Укажіть ваш бюджет:</h2>
+        <input type="number" name="budget" placeholder="Бюджет, $" required />
+        <button type="button" class="quiz__next-button">Далі</button>
+      </div>
+
+      <div class="quiz__step quiz__step--4" style="display: none;">
+        <h2 class="quiz__step-title" >Як з вами краще зв'язатись?</h2>
+        <div class="quiz__options quiz__options-contact-method">
+          <label class="quiz__option">
+            <input type="radio" name="contactMethod" value="phone" />
+            <p>Зателефонуйте мені</p>
+          </label>
+          <label class="quiz__option">
+            <input type="radio" name="contactMethod" value="viber" />
+            <p>Напишіть у вайбер</p>
+          </label>
+          <label class="quiz__option">
+            <input type="radio" name="contactMethod" value="telegram" />
+            <p>Напишіть у телеграм</p>
+          </label>
+        </div>
+        <button type="button" class="quiz__next-button">Далі</button>
+      </div>
+
+      <div class="quiz__step quiz__step--5" style="display: none;">
+          <h2 class="quiz__step-title" >Ваші дані:</h2>
+          <input type="text" name="name" placeholder="Ваше ім'я" required />
+          <input type="tel" name="phone" placeholder="Ваш телефон" required />
+          <button type="submit" class="quiz__next-button">Надіслати</button>
+      </div>
+    </form>
+  </div>
+</div>
