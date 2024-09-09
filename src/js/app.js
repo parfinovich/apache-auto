@@ -7,29 +7,24 @@ import Swiper, { Navigation, Pagination } from "swiper";
 const swiper = new Swiper();
 
 /** Start Menu */
-// Открытие меню
 document.querySelector('.header__menu-button').addEventListener('click', function() {
     document.querySelector('.header__nav').classList.add('header__nav_active');
 });
 
-// Закрытие меню
 document.querySelector('.header__close-button').addEventListener('click', function() {
     document.querySelector('.header__nav').classList.remove('header__nav_active');
 });
 
-// Обрабатываем клики по ссылкам меню
 document.querySelectorAll('.header__menu-link').forEach(function(link) {
     link.addEventListener('click', function(e) {
-        e.preventDefault(); // Отменяем стандартное поведение ссылки
+        e.preventDefault();
 
-        // Плавная прокрутка к соответствующему якорю
         const targetId = link.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         targetElement.scrollIntoView({
-            behavior: 'smooth' // Плавная прокрутка
+            behavior: 'smooth'
         });
 
-        // Закрытие меню после нажатия
         document.querySelector('.header__nav').classList.remove('header__nav_active');
     });
 });
@@ -37,8 +32,8 @@ document.querySelectorAll('.header__menu-link').forEach(function(link) {
 /** Start Quiz */
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('modal');
-    const openModalBtns = document.querySelectorAll('.open-quiz');  // Все кнопки открытия модального окна
-    const carTypeButtons = document.querySelectorAll('.hero__icon-item');  // Кнопки с типами авто
+    const openModalBtns = document.querySelectorAll('.open-quiz');
+    const carTypeButtons = document.querySelectorAll('.hero__icon-item');
     const closeModalBtn = document.querySelector('.modal__close');
     const nextButtons = document.querySelectorAll('.quiz__next-button');
     const steps = document.querySelectorAll('.quiz__step');
@@ -46,36 +41,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalContent = document.querySelector('.modal__content');
     const totalSteps = steps.length;
     let currentStep = 0;
-    let selectedCarType = null;  // Для хранения выбранного типа авто
+    let selectedCarType = null;
 
-    // Функция для сброса всех шагов и возвращения к первому шагу
     function resetSteps() {
         steps.forEach(step => step.style.display = 'none');
         currentStep = 0;
     }
 
-    // Открытие модального окна без предустановленного типа авто (для всех кнопок с классом open-modal)
     openModalBtns.forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            selectedCarType = null;  // Сбрасываем выбор типа авто
-            resetSteps();  // Сброс всех шагов
+            selectedCarType = null;
+            resetSteps();
             modal.style.display = 'block';
-            steps[0].style.display = 'block';  // Отображаем первый шаг
+            steps[0].style.display = 'block';
             currentStep = 0;
             updateProgressBar();
         });
     });
 
-    // Открытие модального окна с предустановленным типом авто
     carTypeButtons.forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            selectedCarType = this.getAttribute('data-car-type');  // Получаем выбранный тип авто
-            resetSteps();  // Сброс всех шагов
+            selectedCarType = this.getAttribute('data-car-type');
+            resetSteps();
             modal.style.display = 'block';
             currentStep = 1;  // Пропускаем первый шаг
-            steps[currentStep].style.display = 'block';  // Показываем второй шаг
+            steps[currentStep].style.display = 'block';
             updateProgressBar();
         });
     });
@@ -102,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validateStep(step) {
         if (step === 0 && selectedCarType) {
-            return true;  // Пропускаем шаг валидации, если тип авто уже выбран
+            return true;
         }
 
         const currentStepInputs = steps[step].querySelectorAll('input[type="radio"]:checked, input[type="number"], input[type="text"], input[type="tel"], select');
@@ -163,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Закрытие окна при клике вне его контента без сброса
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -261,7 +252,7 @@ document.querySelectorAll('.faq__question').forEach(button => {
             faqItem.classList.add('active');
             icon.textContent = '-';
 
-            answer.style.maxHeight = "50vh";
+            answer.style.maxHeight = "100vh";
             answer.style.padding = "20px";
         }
     });
@@ -407,10 +398,8 @@ document.addEventListener('DOMContentLoaded', function () {
 let currentImageIndex = 0;
 const images = [];
 
-// Собираем все изображения из галереи
 const galleryItems = document.querySelectorAll('.imported-cars__gallery-item img');
 
-// Преобразуем изображения в массив и сохраняем их src
 galleryItems.forEach((img, index) => {
     images.push(img.src);
     img.addEventListener('click', () => openGallery(index));
@@ -424,7 +413,6 @@ function openGallery(index) {
         currentImageIndex = index;
         modal.style.display = "flex";
         modalImg.src = images[currentImageIndex];
-        // Добавляем обработчики на закрытие и переключение
         document.querySelector(".gallery-modal__close").addEventListener("click", closeGallery);
         document.querySelector(".gallery-modal__prev").addEventListener("click", () => changeImage(-1));
         document.querySelector(".gallery-modal__next").addEventListener("click", () => changeImage(1));

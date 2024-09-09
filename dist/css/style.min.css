@@ -349,6 +349,11 @@ button {
   height: 25px;
   margin-right: 15px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header__social-icon:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .header__request-button {
   border: 1px solid #050B20;

@@ -161,6 +161,11 @@
         height: 25px;
         margin-right: 15px;
         cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+            transition: all .3s ease-in-out;
+        }
     }
     &__request-button {
         border: 1px solid $main-color;
