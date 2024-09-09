@@ -129,7 +129,12 @@ button {
         padding: 0 10px;
     }
 }
-
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
 @keyframes carMove {
     0% {
         -webkit-transform: translateX(2000px) scale(0.9);

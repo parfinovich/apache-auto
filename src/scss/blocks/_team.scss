@@ -68,11 +68,36 @@
         color: $main-color;
         text-decoration: none;
     }
-
+    &__social-list {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    }
+    
+    &__social-item {
+        display: inline-block;
+    }
+    
+    &__social-link {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    &__social-link:hover {
+        transform: scale(1.1);
+    }
+    
+    &__social-icon {
+        width: 30px;
+        height: 30px;
+    }
     &__button {
         @include primary_btn;
         border-radius: 12px;
         width: 185px;
+        margin-top: 40px;
     }
 }
 @media (max-width: 575.98px) {

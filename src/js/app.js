@@ -380,18 +380,18 @@ window.addEventListener('scroll', function() {
 
 /** Start Animation */
 document.addEventListener('DOMContentLoaded', function () {
-    const animatedElements = document.querySelectorAll('.animate'); // Находим все элементы с классом "animate"
+    const animatedElements = document.querySelectorAll('.animate');
 
     const options = {
-        root: null, // viewport
-        threshold: 0.1 // элемент виден на 10%
+        root: null,
+        threshold: 0.1
     };
 
     const handleIntersection = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('zoom-in'); // Добавляем класс для анимации
-                observer.unobserve(entry.target); // Прекращаем наблюдение после первого срабатывания
+                entry.target.classList.add('zoom-in');
+                observer.unobserve(entry.target);
             }
         });
     };
@@ -399,6 +399,53 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver(handleIntersection, options);
 
     animatedElements.forEach(element => {
-        observer.observe(element); // Наблюдаем за каждым элементом с классом "animate"
+        observer.observe(element);
     });
 });
+
+/** Start Modal Gallery */
+let currentImageIndex = 0;
+const images = [];
+
+// Собираем все изображения из галереи
+const galleryItems = document.querySelectorAll('.imported-cars__gallery-item img');
+
+// Преобразуем изображения в массив и сохраняем их src
+galleryItems.forEach((img, index) => {
+    images.push(img.src);
+    img.addEventListener('click', () => openGallery(index));
+});
+
+function openGallery(index) {
+    const modal = document.getElementById("gallery-modal");
+    const modalImg = document.getElementById("gallery-modal-image");
+
+    if (modal && modalImg) {
+        currentImageIndex = index;
+        modal.style.display = "flex";
+        modalImg.src = images[currentImageIndex];
+        // Добавляем обработчики на закрытие и переключение
+        document.querySelector(".gallery-modal__close").addEventListener("click", closeGallery);
+        document.querySelector(".gallery-modal__prev").addEventListener("click", () => changeImage(-1));
+        document.querySelector(".gallery-modal__next").addEventListener("click", () => changeImage(1));
+    } else {
+        console.error("Элемент с id 'gallery-modal' не найден.");
+    }
+}
+
+function closeGallery() {
+    const modal = document.getElementById("gallery-modal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+function changeImage(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+    } else if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+    }
+    document.getElementById("gallery-modal-image").src = images[currentImageIndex];
+}

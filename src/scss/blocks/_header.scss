@@ -134,7 +134,7 @@
     }
     &__logo {
         display: inline-block;
-        width: 100%;
+        max-width: 120px;
         height: 100%;
     }
     &__logo-image {
@@ -160,6 +160,7 @@
         width: 25px;
         height: 25px;
         margin-right: 15px;
+        cursor: pointer;
     }
     &__request-button {
         border: 1px solid $main-color;
@@ -172,7 +173,7 @@
             background: $second-color;
             color: #fff !important;
             transition: all .3s ease-in;
-            border: none;
+            border: 1px solid $second-color;
         }
     }
     &__request-button-mobile {
@@ -333,6 +334,13 @@
             background-color: $second-color;
             color: #fff !important;
             border: none;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .header {
+        &__request-button {
+            padding: 10px 15px;
         }
     }
 }
